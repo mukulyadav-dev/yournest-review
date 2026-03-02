@@ -19,11 +19,7 @@
             --white: #ffffff;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         html {
             scroll-behavior: smooth;
@@ -39,96 +35,43 @@
 
         /* ── Navigation ── */
         nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 0 2rem;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 2rem; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
             background: rgba(255,255,255,0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(233,30,140,0.08);
             transition: all 0.4s ease;
         }
-
-        nav.scrolled {
-            box-shadow: 0 4px 30px rgba(233,30,140,0.08);
-        }
-
-        .nav-brand {
-            font-weight: 800;
-            font-size: 1.1rem;
-            color: var(--pink);
-            letter-spacing: -0.02em;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 0.25rem;
-        }
-
+        nav.scrolled { box-shadow: 0 4px 30px rgba(233,30,140,0.08); }
+        .nav-brand { font-weight: 800; font-size: 1.1rem; color: var(--pink); letter-spacing: -0.02em; }
+        .nav-links { display: flex; gap: 0.25rem; }
         .nav-links a {
-            text-decoration: none;
-            color: var(--gray);
-            font-size: 0.78rem;
-            font-weight: 500;
-            padding: 0.4rem 0.75rem;
-            border-radius: 100px;
-            transition: all 0.3s ease;
+            text-decoration: none; color: var(--gray); font-size: 0.78rem; font-weight: 500;
+            padding: 0.4rem 0.75rem; border-radius: 100px; transition: all 0.3s ease;
         }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--pink);
-            background: var(--pink-glow);
-        }
+        .nav-links a:hover, .nav-links a.active { color: var(--pink); background: var(--pink-glow); }
 
         /* ── Progress bar ── */
         .progress-bar {
-            position: fixed;
-            top: 64px;
-            left: 0;
-            height: 3px;
+            position: fixed; top: 64px; left: 0; height: 3px;
             background: linear-gradient(90deg, var(--pink), #ff6ec7);
-            z-index: 999;
-            transition: width 0.1s linear;
-            border-radius: 0 2px 2px 0;
+            z-index: 999; transition: width 0.1s linear; border-radius: 0 2px 2px 0;
         }
 
         /* ── Sections ── */
         section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 2rem 60px;
-            position: relative;
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            padding: 100px 2rem 60px; position: relative;
         }
-
-        .section-inner {
-            max-width: 1100px;
-            width: 100%;
-            margin: 0 auto;
-        }
+        .section-inner { max-width: 1100px; width: 100%; margin: 0 auto; }
 
         /* ── Reveal animation ── */
         .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            opacity: 0; transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
+        .reveal.visible { opacity: 1; transform: translateY(0); }
         .reveal-delay-1 { transition-delay: 0.1s; }
         .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.3s; }
@@ -137,834 +80,300 @@
 
         /* ── Tag / Label ── */
         .tag {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--pink);
-            margin-bottom: 0.75rem;
+            display: inline-block; font-size: 0.75rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.12em; color: var(--pink); margin-bottom: 0.75rem;
         }
-
         .section-title {
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            font-weight: 800;
-            line-height: 1.15;
-            letter-spacing: -0.03em;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
+            font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.15;
+            letter-spacing: -0.03em; color: var(--dark); margin-bottom: 1.5rem;
         }
-
-        .section-title span {
-            color: var(--pink);
-        }
-
-        .subtitle {
-            font-size: 1.15rem;
-            color: var(--gray);
-            line-height: 1.7;
-            max-width: 600px;
-        }
+        .section-title span { color: var(--pink); }
+        .subtitle { font-size: 1.15rem; color: var(--gray); line-height: 1.7; max-width: 600px; }
 
         /* ── Title Slide ── */
-        #title-slide {
-            background: var(--darker);
-            text-align: center;
-        }
-
+        #title-slide { background: var(--darker); text-align: center; }
         .title-slide-inner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem;
         }
-
         .title-slide-inner .townhall-label {
-            font-size: clamp(2.8rem, 7vw, 4.5rem);
-            font-weight: 900;
-            letter-spacing: -0.04em;
-            line-height: 1.05;
-            color: white;
+            font-size: clamp(2.8rem, 7vw, 4.5rem); font-weight: 900;
+            letter-spacing: -0.04em; line-height: 1.05; color: white;
         }
-
         .title-slide-inner .townhall-label span {
             background: linear-gradient(135deg, var(--pink), #f472b6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
-
         .title-slide-inner .townhall-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.6rem);
-            font-weight: 600;
-            color: rgba(255,255,255,0.75);
-            margin-top: 0.5rem;
+            font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 600; color: rgba(255,255,255,0.75); margin-top: 0.5rem;
         }
 
         /* ── Questions Slide ── */
-        #questions-slide {
-            background: var(--darker);
-            padding-top: 80px;
-            padding-bottom: 40px;
-        }
-
+        #questions-slide { background: var(--darker); padding-top: 80px; padding-bottom: 40px; }
         #questions-slide .section-title { color: white; margin-bottom: 1rem; }
         #questions-slide .section-title span { color: #f472b6; }
-
-        .questions-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.7rem;
-            max-width: 900px;
-        }
-
+        .questions-list { display: flex; flex-direction: column; gap: 0.7rem; max-width: 900px; }
         .question-card {
-            padding: 0.85rem 1.25rem;
-            border-radius: 12px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            display: flex;
-            align-items: baseline;
-            gap: 0.75rem;
-            transition: all 0.4s ease;
+            padding: 0.85rem 1.25rem; border-radius: 12px;
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+            display: flex; align-items: baseline; gap: 0.75rem; transition: all 0.4s ease;
         }
-
-        .question-card:hover {
-            background: rgba(233, 30, 140, 0.08);
-            border-color: rgba(233, 30, 140, 0.25);
-        }
-
+        .question-card:hover { background: rgba(233, 30, 140, 0.08); border-color: rgba(233, 30, 140, 0.25); }
         .question-card .q-num {
-            flex-shrink: 0;
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            background: rgba(233, 30, 140, 0.2);
-            color: var(--pink);
-            font-size: 0.75rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+            background: rgba(233, 30, 140, 0.2); color: var(--pink);
+            font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center;
         }
+        .question-card .q-text { font-size: 0.88rem; color: rgba(255,255,255,0.85); line-height: 1.5; }
 
-        .question-card .q-text {
-            font-size: 0.88rem;
-            color: rgba(255,255,255,0.85);
-            line-height: 1.5;
-        }
-
-        /* ── Section 1: Opening (Hero) ── */
-        #opening {
+        /* ── Launch Slide ── */
+        #launch {
             background: linear-gradient(135deg, #fdf2f8 0%, #fff 40%, #fce7f3 100%);
-            overflow: hidden;
-            min-height: 100vh;
-        }
-
-        .hero-content {
             text-align: center;
-            max-width: 700px;
-            margin: 0 auto;
         }
-
-        .hero-left .tag {
-            font-size: 0.85rem;
-        }
-
+        .launch-inner { max-width: 750px; margin: 0 auto; }
         .hero-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 900;
-            line-height: 1.05;
-            letter-spacing: -0.04em;
+            font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.04em;
             background: linear-gradient(135deg, var(--pink), var(--pink-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--dark);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
             margin-bottom: 0.75rem;
         }
-
-        .hero-desc {
-            font-size: 1.05rem;
-            color: var(--gray);
-            line-height: 1.7;
+        .hero-subtitle {
+            font-size: 1.3rem; font-weight: 600; color: var(--dark); margin-bottom: 2rem;
         }
 
-        .hero-cta {
-            margin-top: 2rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.85rem 1.75rem;
-            background: var(--pink);
-            color: white;
-            border: none;
-            border-radius: 100px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
+        /* ── Message Cards (NEW) ── */
+        .message-cards {
+            display: flex; flex-direction: column; gap: 1rem;
+            max-width: 700px; margin: 0 auto;
         }
-
-        .hero-cta:hover {
-            background: var(--pink-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(233, 30, 140, 0.3);
-        }
-
-        .hero-cta svg {
-            transition: transform 0.3s ease;
-        }
-
-        .hero-cta:hover svg {
-            transform: translateY(3px);
-        }
-
-        .hero-visual {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-orb {
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #fce4f2, #f9a8d4, var(--pink));
-            opacity: 0.6;
-            filter: blur(60px);
-            animation: orbFloat 6s ease-in-out infinite;
-        }
-
-        @keyframes orbFloat {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(20px, -20px) scale(1.05); }
-        }
-
-        .hero-stats {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .hero-stat-card {
-            background: rgba(255,255,255,0.9);
-            backdrop-filter: blur(20px);
-            border-radius: 16px;
-            padding: 1.25rem 1.75rem;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-            border: 1px solid rgba(233, 30, 140, 0.1);
-            animation: cardFloat 4s ease-in-out infinite;
-        }
-
-        .hero-stat-card:nth-child(1) { animation-delay: 0s; transform: translateX(-60px); }
-        .hero-stat-card:nth-child(2) { animation-delay: 1.3s; transform: translateX(60px); }
-        .hero-stat-card:nth-child(3) { animation-delay: 2.6s; transform: translateX(-30px); }
-
-        @keyframes cardFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .hero-stat-card .number {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--pink);
-        }
-
-        .hero-stat-card .label {
-            font-size: 0.78rem;
-            color: var(--gray);
-            margin-top: 0.15rem;
-        }
-
-        /* ── Section 2: Gaps (honest transition) ── */
-        #gaps {
-            background: var(--light-gray);
-        }
-
-        .gaps-center {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .gaps-center p {
-            font-size: 1.25rem;
-            color: var(--gray);
-            line-height: 1.8;
-            margin-bottom: 1.25rem;
-        }
-
-        .gaps-center p strong {
-            color: var(--dark);
-            font-weight: 700;
-        }
-
-        /* ── Fix sections (3 & 4): two-column layout ── */
-        #fix-onboarding {
-            background: var(--white);
-        }
-
-        #fix-partners {
-            background: linear-gradient(180deg, #fdf2f8 0%, #fff 100%);
-        }
-
-        .fix-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-top: 2.5rem;
-        }
-
-        .fix-text p {
-            font-size: 1.1rem;
-            color: var(--gray);
-            line-height: 1.8;
-        }
-
-        .fix-text p strong {
-            color: var(--dark);
-        }
-
-        .fix-metrics {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-
-        .fix-metric {
-            padding: 1.5rem 2rem;
-            border-radius: 16px;
-            background: var(--white);
-            border: 1px solid rgba(233, 30, 140, 0.1);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        .message-card {
+            padding: 1.25rem 1.5rem; border-radius: 14px;
+            background: rgba(255,255,255,0.85); border-left: 4px solid var(--pink);
+            text-align: left; font-size: 1.05rem; color: var(--dark); line-height: 1.65;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             transition: all 0.4s ease;
         }
-
-        .fix-metric:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(233, 30, 140, 0.08);
+        .message-card:hover {
+            transform: translateY(-2px); box-shadow: 0 8px 30px rgba(233,30,140,0.08);
         }
 
-        .fix-metric .metric-name {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--gray);
-            margin-bottom: 0.5rem;
+        /* ── Reset Slide ── */
+        #reset { background: var(--white); text-align: center; }
+        .reset-inner { max-width: 750px; margin: 0 auto; }
+        .reset-footer {
+            margin-top: 2.5rem; padding: 1.25rem 2rem; border-radius: 16px;
+            background: linear-gradient(135deg, rgba(233,30,140,0.08), rgba(233,30,140,0.02));
+            border: 1px solid rgba(233,30,140,0.15);
+            font-size: 1.15rem; font-weight: 700; color: var(--pink);
         }
 
-        .fix-metric .metric-values {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+        /* ── Fix sections: two-column layout ── */
+        #fix-customers { background: var(--white); }
+        #fix-partners { background: linear-gradient(180deg, #fdf2f8 0%, #fff 100%); }
+        .fix-content {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+            align-items: center; margin-top: 2.5rem;
         }
-
-        .fix-metric .before-val {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--gray);
-            opacity: 0.6;
+        .fix-text p { font-size: 1.1rem; color: var(--gray); line-height: 1.8; }
+        .fix-text p strong { color: var(--dark); }
+        .fix-metrics { display: flex; flex-direction: column; gap: 1.25rem; }
+        .fix-metric {
+            padding: 1.5rem 2rem; border-radius: 16px; background: var(--white);
+            border: 1px solid rgba(233,30,140,0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            transition: all 0.4s ease;
         }
-
-        .fix-metric .arrow {
-            font-size: 1.2rem;
-            color: var(--pink);
-        }
-
-        .fix-metric .after-val {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--dark);
-        }
-
-        .fix-metric .trend {
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-left: 0.35rem;
-        }
-
+        .fix-metric:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(233,30,140,0.08); }
+        .fix-metric .metric-name { font-size: 0.85rem; font-weight: 600; color: var(--gray); margin-bottom: 0.5rem; }
+        .fix-metric .metric-values { display: flex; align-items: center; gap: 0.75rem; }
+        .fix-metric .before-val { font-size: 1.5rem; font-weight: 700; color: var(--gray); opacity: 0.6; }
+        .fix-metric .arrow { font-size: 1.2rem; color: var(--pink); }
+        .fix-metric .after-val { font-size: 1.5rem; font-weight: 800; color: var(--dark); }
+        .fix-metric .trend { font-size: 0.8rem; font-weight: 600; margin-left: 0.35rem; }
         .fix-metric .trend.up { color: #10b981; }
         .fix-metric .trend.down { color: #10b981; }
-
         .fix-metric.hero {
             border: 2px solid var(--pink);
             background: linear-gradient(135deg, #fff 0%, #fdf2f8 100%);
-            box-shadow: 0 8px 30px rgba(233, 30, 140, 0.1);
+            box-shadow: 0 8px 30px rgba(233,30,140,0.1);
         }
+        .fix-metric.hero .after-val { font-size: 2rem; color: var(--pink); }
 
-        .fix-metric.hero .after-val {
-            font-size: 2rem;
-            color: var(--pink);
+        /* ── Metric Journey (3-step) ── */
+        .metric-journey {
+            display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
         }
-
-        /* ── Section 5: Scoreboard ── */
-        #scoreboard {
-            background: var(--white);
+        .metric-journey .step {
+            font-size: 1.3rem; font-weight: 700; color: var(--gray); opacity: 0.5;
         }
-
-        .scoreboard-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 2.5rem;
+        .metric-journey .step.current { opacity: 1; color: var(--dark); }
+        .metric-journey .step.hero-val { font-size: 2rem; font-weight: 900; color: var(--pink); opacity: 1; }
+        .metric-journey .arrow { font-size: 1rem; color: var(--pink); }
+        .metric-journey .step-label {
+            display: block; font-size: 0.65rem; font-weight: 600; color: var(--gray);
+            text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.15rem;
         }
+        .metric-journey .step-group { text-align: center; }
 
-        .scoreboard-card {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            border-radius: 20px;
-            background: var(--white);
-            border: 1px solid rgba(233, 30, 140, 0.08);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            transition: all 0.4s ease;
+        /* ── Slope Slide ── */
+        #slope { background: #12121f; text-align: center; color: white; }
+        #slope .section-title { color: white; }
+        #slope .section-title span { color: #f472b6; }
+        .slope-text {
+            max-width: 700px; margin: 0 auto;
         }
-
-        .scoreboard-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 50px rgba(233, 30, 140, 0.1);
-            border-color: rgba(233, 30, 140, 0.2);
+        .slope-text p {
+            font-size: 1.2rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 1.5rem;
         }
-
-        .scoreboard-number {
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            font-weight: 900;
-            color: var(--dark);
-            letter-spacing: -0.03em;
-            line-height: 1;
-        }
-
-        .scoreboard-label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin-top: 0.5rem;
-        }
-
-        .scoreboard-trend {
+        .slope-text p strong { color: white; }
+        .slope-highlight {
+            margin-top: 1rem; padding: 1rem 2rem; border-radius: 100px;
             display: inline-block;
-            font-size: 0.78rem;
-            font-weight: 600;
-            margin-top: 0.35rem;
-            padding: 0.2rem 0.6rem;
-            border-radius: 100px;
+            background: rgba(233,30,140,0.15); border: 1px solid rgba(233,30,140,0.3);
+            font-size: 1.15rem; font-weight: 700; color: var(--pink);
         }
 
-        .scoreboard-trend.up {
-            color: #10b981;
-            background: #ecfdf5;
-        }
-
-        .scoreboard-trend.down-good {
-            color: #10b981;
-            background: #ecfdf5;
-        }
-
-        .scoreboard-footer {
-            text-align: center;
-            margin-top: 2.5rem;
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
-
-        /* ── Section 6: Our Story (Video) ── */
-        #our-story {
-            background: var(--darker);
-            color: white;
-        }
-
-        #our-story .tag { color: #f9a8d4; }
-        #our-story .section-title { color: white; }
-        #our-story .section-title span { color: #f472b6; }
-
+        /* ── Video Section ── */
+        #ek-kahani { background: var(--darker); color: white; }
+        #ek-kahani .tag { color: #f9a8d4; }
+        #ek-kahani .section-title { color: white; }
+        #ek-kahani .section-title span { color: #f472b6; }
         .video-content {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 4rem;
-            align-items: center;
-            margin-top: 2rem;
+            display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem;
+            align-items: center; margin-top: 2rem;
         }
-
         .video-card {
-            border-radius: 20px;
-            overflow: hidden;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.4s ease;
-            max-width: 400px;
+            border-radius: 20px; overflow: hidden;
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.4s ease; max-width: 400px;
         }
-
-        .video-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 20px 60px rgba(233, 30, 140, 0.2);
-        }
-
+        .video-card:hover { transform: scale(1.02); box-shadow: 0 20px 60px rgba(233,30,140,0.2); }
         .video-thumb {
             aspect-ratio: 16/9;
             background: linear-gradient(135deg, #2d1b3d, #1a0a2e);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
         }
-
         .video-thumb::before {
-            content: '';
-            position: absolute;
-            inset: 0;
+            content: ''; position: absolute; inset: 0;
             background: linear-gradient(135deg, rgba(233,30,140,0.2), transparent);
         }
-
         .play-btn {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            background: var(--pink);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
-            box-shadow: 0 4px 20px rgba(233, 30, 140, 0.4);
+            width: 64px; height: 64px; border-radius: 50%; background: var(--pink);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 1; box-shadow: 0 4px 20px rgba(233,30,140,0.4);
         }
-
-        .play-btn svg {
-            fill: white;
-            margin-left: 4px;
-        }
-
-        .video-info {
-            padding: 1.25rem 1.5rem;
-        }
-
-        .video-info h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: white;
-        }
-
-        .video-info p {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.5);
-            margin-top: 0.35rem;
-        }
-
-        .video-text p {
-            font-size: 1.15rem;
-            color: rgba(255,255,255,0.7);
-            line-height: 1.7;
-        }
-
+        .play-btn svg { fill: white; margin-left: 4px; }
+        .video-info { padding: 1.25rem 1.5rem; }
+        .video-info h4 { font-size: 1.1rem; font-weight: 700; color: white; }
+        .video-info p { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 0.35rem; }
+        .video-text p { font-size: 1.15rem; color: rgba(255,255,255,0.7); line-height: 1.7; }
         .video-stat {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
-            padding: 0.6rem 1.25rem;
-            background: rgba(233, 30, 140, 0.15);
-            border-radius: 100px;
-            border: 1px solid rgba(233, 30, 140, 0.3);
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            margin-top: 1.5rem; padding: 0.6rem 1.25rem;
+            background: rgba(233,30,140,0.15); border-radius: 100px;
+            border: 1px solid rgba(233,30,140,0.3);
         }
+        .video-stat .num { font-size: 1.2rem; font-weight: 800; color: var(--pink); }
+        .video-stat .txt { font-size: 0.85rem; color: rgba(255,255,255,0.7); }
 
-        .video-stat .num {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--pink);
-        }
-
-        .video-stat .txt {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.7);
-        }
-
-        /* ── Section 7: What's Next ── */
-        #whats-next {
-            background: var(--darker);
-            color: white;
-        }
-
+        /* ── What's Next ── */
+        #whats-next { background: var(--darker); color: white; }
         #whats-next .tag { color: #f9a8d4; }
         #whats-next .section-title { color: white; }
         #whats-next .section-title span { color: #f472b6; }
-
-        .timeline-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 2.5rem;
-        }
-
+        .timeline-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
         .timeline-card {
-            padding: 1.75rem;
-            border-radius: 16px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            backdrop-filter: blur(10px);
-            transition: all 0.4s ease;
+            padding: 1.75rem; border-radius: 16px;
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px); transition: all 0.4s ease;
         }
-
         .timeline-card:hover {
-            background: rgba(233, 30, 140, 0.12);
-            border-color: rgba(233, 30, 140, 0.3);
-            transform: translateY(-4px);
+            background: rgba(233,30,140,0.12); border-color: rgba(233,30,140,0.3); transform: translateY(-4px);
         }
-
         .timeline-date {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--pink);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
+            font-size: 0.75rem; font-weight: 700; color: var(--pink);
+            text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;
         }
-
-        .timeline-text {
-            font-size: 1rem;
-            font-weight: 600;
-            color: white;
-            line-height: 1.4;
-        }
-
-        .timeline-closer {
-            grid-column: 1 / -1;
-            margin-top: 0.5rem;
-        }
-
+        .timeline-text { font-size: 1rem; font-weight: 600; color: white; line-height: 1.4; }
+        .timeline-closer { grid-column: 1 / -1; margin-top: 0.5rem; }
         .timeline-closer .timeline-card {
             background: linear-gradient(135deg, rgba(233,30,140,0.15), rgba(233,30,140,0.05));
-            border-color: rgba(233,30,140,0.2);
-            text-align: center;
+            border-color: rgba(233,30,140,0.2); text-align: center;
         }
+        .timeline-closer .timeline-text { font-size: 1.15rem; }
 
-        .timeline-closer .timeline-text {
-            font-size: 1.15rem;
-        }
-
-        /* ── Section 8: Together (Closing) ── */
+        /* ── Closing ── */
         #together {
             background: linear-gradient(135deg, #fdf2f8 0%, #fff 40%, #fce7f3 100%);
             text-align: center;
         }
-
-        .closing-text {
-            max-width: 700px;
-            margin: 2rem auto 0;
-        }
-
-        .closing-text p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .closing-text p strong {
-            color: var(--dark);
-        }
-
-        .closing-text .closing-final {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--pink);
-            margin-top: 1rem;
-        }
+        .closing-text { max-width: 700px; margin: 2rem auto 0; }
+        .closing-text p { font-size: 1.2rem; color: var(--gray); line-height: 1.8; margin-bottom: 1.5rem; }
+        .closing-text p strong { color: var(--dark); }
+        .closing-text .closing-final { font-size: 1.4rem; font-weight: 800; color: var(--pink); margin-top: 1rem; }
 
         /* ── Footer ── */
         footer {
-            padding: 3rem 2rem;
-            text-align: center;
-            background: var(--darker);
-            color: rgba(255,255,255,0.4);
-            font-size: 0.85rem;
+            padding: 3rem 2rem; text-align: center; background: var(--darker);
+            color: rgba(255,255,255,0.4); font-size: 0.85rem;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
 
         /* ── Presentation Mode ── */
         .pres-controls {
-            position: fixed;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            z-index: 2000;
-            background: rgba(26,26,46,0.9);
-            backdrop-filter: blur(16px);
-            padding: 0.6rem 1.25rem;
-            border-radius: 100px;
+            position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
+            display: flex; align-items: center; gap: 1rem; z-index: 2000;
+            background: rgba(26,26,46,0.9); backdrop-filter: blur(16px);
+            padding: 0.6rem 1.25rem; border-radius: 100px;
             border: 1px solid rgba(233,30,140,0.2);
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s;
+            opacity: 0; pointer-events: none; transition: opacity 0.3s;
         }
-
         body.pres-mode .pres-controls { opacity: 1; pointer-events: auto; }
-
         .pres-controls button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.2rem;
-            cursor: pointer;
-            padding: 0.3rem 0.6rem;
-            border-radius: 8px;
-            transition: background 0.2s;
+            background: none; border: none; color: white; font-size: 1.2rem;
+            cursor: pointer; padding: 0.3rem 0.6rem; border-radius: 8px; transition: background 0.2s;
         }
-
         .pres-controls button:hover { background: rgba(255,255,255,0.1); }
-
-        .pres-counter {
-            color: rgba(255,255,255,0.7);
-            font-size: 0.82rem;
-            font-weight: 600;
-            min-width: 3.5rem;
-            text-align: center;
-        }
-
-        .pres-dots {
-            display: flex;
-            gap: 6px;
-        }
-
+        .pres-counter { color: rgba(255,255,255,0.7); font-size: 0.82rem; font-weight: 600; min-width: 3.5rem; text-align: center; }
+        .pres-dots { display: flex; gap: 6px; }
         .pres-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.25);
-            transition: all 0.3s;
-            cursor: pointer;
-            border: none;
-            padding: 0;
+            width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.25);
+            transition: all 0.3s; cursor: pointer; border: none; padding: 0;
         }
-
-        .pres-dot.active {
-            background: var(--pink);
-            transform: scale(1.3);
-        }
-
+        .pres-dot.active { background: var(--pink); transform: scale(1.3); }
         .pres-toggle {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            z-index: 2001;
-            background: rgba(26,26,46,0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(233,30,140,0.2);
-            color: white;
-            font-size: 0.78rem;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            border-radius: 100px;
-            cursor: pointer;
-            transition: all 0.3s;
+            position: fixed; top: 1rem; right: 1rem; z-index: 2001;
+            background: rgba(26,26,46,0.85); backdrop-filter: blur(12px);
+            border: 1px solid rgba(233,30,140,0.2); color: white;
+            font-size: 0.78rem; font-weight: 600; padding: 0.5rem 1rem;
+            border-radius: 100px; cursor: pointer; transition: all 0.3s;
         }
-
-        .pres-toggle:hover {
-            background: var(--pink);
-        }
-
-        body.pres-mode {
-            overflow: hidden;
-        }
-
-        body.pres-mode nav,
-        body.pres-mode .progress-bar,
-        body.pres-mode footer {
-            display: none !important;
-        }
-
+        .pres-toggle:hover { background: var(--pink); }
+        body.pres-mode { overflow: hidden; }
+        body.pres-mode nav, body.pres-mode .progress-bar, body.pres-mode footer { display: none !important; }
         body.pres-mode section {
-            position: fixed;
-            inset: 0;
-            min-height: 100vh;
-            height: 100vh;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.5s ease;
-            overflow-y: auto;
-            z-index: 1;
+            position: fixed; inset: 0; min-height: 100vh; height: 100vh;
+            opacity: 0; pointer-events: none; transition: opacity 0.5s ease;
+            overflow-y: auto; z-index: 1;
         }
-
-        body.pres-mode section.slide-active {
-            opacity: 1;
-            pointer-events: auto;
-            z-index: 10;
-        }
-
-        body.pres-mode section .reveal {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        body.pres-mode section.slide-active { opacity: 1; pointer-events: auto; z-index: 10; }
+        body.pres-mode section .reveal { opacity: 1; transform: translateY(0); }
 
         /* ── Responsive ── */
         @media (max-width: 768px) {
-            .hero-content,
-            .fix-content,
-            .video-content,
-            .timeline-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .scoreboard-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 1rem;
-            }
-
-            .hero-visual {
-                display: none;
-            }
-
-            section {
-                padding: 80px 1.25rem 40px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            nav {
-                padding: 0 1.25rem;
-            }
-
-            .timeline-closer {
-                grid-column: 1;
-            }
+            .fix-content, .video-content { grid-template-columns: 1fr; gap: 2rem; }
+            .timeline-grid { grid-template-columns: 1fr; gap: 1rem; }
+            section { padding: 80px 1.25rem 40px; }
+            .nav-links { display: none; }
+            nav { padding: 0 1.25rem; }
+            .timeline-closer { grid-column: 1; }
         }
 
         @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2.2rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .scoreboard-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .scoreboard-number {
-                font-size: 2rem;
-            }
-
-            .fix-metric.hero .after-val {
-                font-size: 1.6rem;
-            }
+            .hero-title { font-size: 2.2rem; }
+            .section-title { font-size: 1.8rem; }
+            .fix-metric.hero .after-val { font-size: 1.6rem; }
+            .metric-journey .step.hero-val { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -975,11 +384,12 @@
         <div class="nav-brand">Wiom Townhall</div>
         <div class="nav-links">
             <a href="#title-slide" class="active">Home</a>
-            <a href="#opening">Overview</a>
-            <a href="#gaps">Fixes</a>
-            <a href="#scoreboard">Scoreboard</a>
-            <a href="#our-story">Story</a>
-            <a href="#whats-next">March</a>
+            <a href="#questions-slide">Questions</a>
+            <a href="#launch">Launch</a>
+            <a href="#reset">Reset</a>
+            <a href="#fix-customers">Fixes</a>
+            <a href="#slope">Slope</a>
+            <a href="#whats-next">Next</a>
             <a href="#together">Together</a>
         </div>
     </nav>
@@ -988,7 +398,7 @@
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- TITLE SLIDE                                -->
+    <!-- 1. TITLE SLIDE                             -->
     <!-- ═══════════════════════════════════════════ -->
     <section id="title-slide">
         <div class="section-inner">
@@ -1000,7 +410,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- QUESTIONS FROM THE TEAM                    -->
+    <!-- 2. QUESTIONS FROM THE TEAM                 -->
     <!-- ═══════════════════════════════════════════ -->
     <section id="questions-slide">
         <div class="section-inner">
@@ -1031,81 +441,84 @@
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 1: OPENING — "Here's Where Wiom Stands" -->
+    <!-- 3. WHAT WE LAUNCHED                        -->
     <!-- ═══════════════════════════════════════════ -->
-    <section id="opening">
+    <section id="launch">
         <div class="section-inner">
-            <div class="hero-content">
-                <div class="hero-left">
-                    <div class="tag reveal">March 2026</div>
-                    <h1 class="hero-title reveal reveal-delay-1">Here's Where Wiom Stands</h1>
-                    <p class="hero-subtitle reveal reveal-delay-2">Customers are finding us on their own. Zero push spend.</p>
-                    <a href="#gaps" class="hero-cta reveal reveal-delay-3">
-                        See How We Got Here
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </a>
+            <div class="launch-inner">
+                <div class="tag reveal">What We Launched</div>
+                <h1 class="hero-title reveal reveal-delay-1">Recharge Wala Ghar Ka Net</h1>
+                <p class="hero-subtitle reveal reveal-delay-2">Pay as you go Internet &mdash; launched January 26th</p>
+                <div class="message-cards">
+                    <div class="message-card reveal reveal-delay-3">A brand new category &mdash; we needed to get our processes and comms right first</div>
+                    <div class="message-card reveal reveal-delay-4">The purpose was to improve retention, not chase growth</div>
+                    <div class="message-card reveal reveal-delay-5">Growth would come from compounding of retention and word of mouth</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 2: WE WATCHED EVERY NUMBER          -->
+    <!-- 4. THE RESET                               -->
     <!-- ═══════════════════════════════════════════ -->
-    <section id="gaps">
+    <section id="reset">
         <div class="section-inner">
-            <div class="gaps-center">
-                <div class="tag reveal">We Watched Every Number</div>
-                <h2 class="section-title reveal reveal-delay-1">When Something Broke,<br/><span>We Fixed It Fast</span></h2>
-                <p class="reveal reveal-delay-2">After the big changes, not everything worked perfectly.</p>
-                <p class="reveal reveal-delay-3">Some customers got confused during onboarding. Some partners hesitated on new leads.</p>
-                <p class="reveal reveal-delay-4"><strong>We caught the gaps early — and fixed them in days, not months.</strong></p>
+            <div class="reset-inner">
+                <div class="tag reveal">The Reset</div>
+                <h2 class="section-title reveal reveal-delay-1">We Reset to a <span>Pull-Based System</span></h2>
+                <div class="message-cards">
+                    <div class="message-card reveal reveal-delay-2">We stopped all performance marketing</div>
+                    <div class="message-card reveal reveal-delay-3">We didn't want to grow without managing efficiency &mdash; scaling up inefficiencies makes it impossible to create a pull-based system</div>
+                    <div class="message-card reveal reveal-delay-4">The way to look at numbers changed &mdash; slope is more important than height</div>
+                </div>
+                <div class="reset-footer reveal reveal-delay-5">Still getting 100+ bookings every day. Zero push spend.</div>
             </div>
         </div>
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 3: FIX 1 — CLEARER ONBOARDING      -->
+    <!-- 5. FIX 1: CUSTOMER CLARITY                 -->
     <!-- ═══════════════════════════════════════════ -->
-    <section id="fix-onboarding">
+    <section id="fix-customers">
         <div class="section-inner">
             <div class="tag reveal">Fix 1</div>
-            <h2 class="section-title reveal reveal-delay-1">Customers Weren't Sure <span>What to Do Next</span></h2>
+            <h2 class="section-title reveal reveal-delay-1">Some Customers Were Confused. <span>We Fixed It.</span></h2>
             <div class="fix-content">
                 <div class="fix-text reveal reveal-delay-2">
                     <p>
-                        We redesigned the onboarding flow — <strong>clearer screens, explicit pricing, simpler journey.</strong>
+                        Initially there were clarity-related issues in onboarding. Customers weren't sure how pay-as-you-go worked, what they'd pay, or when.
                     </p>
                     <p style="margin-top: 1rem;">
-                        When a customer books Wiom, they now know exactly what they're getting, what it costs, and what happens next. No confusion, no surprises.
+                        <strong>We redesigned the flow, simplified the messaging, and made the journey crystal clear.</strong>
                     </p>
                 </div>
                 <div class="fix-metrics">
                     <div class="fix-metric reveal reveal-delay-2">
-                        <div class="metric-name">Booking confirmed (48h)</div>
+                        <div class="metric-name">Cancellation rate</div>
                         <div class="metric-values">
-                            <span class="before-val">85%</span>
+                            <span class="before-val">7.2%</span>
                             <span class="arrow">&#8594;</span>
-                            <span class="after-val">88%</span>
-                            <span class="trend up">&#8593;</span>
+                            <span class="after-val">6%</span>
+                            <span class="trend down">&#8595; 20% drop</span>
                         </div>
                     </div>
-                    <div class="fix-metric reveal reveal-delay-3">
-                        <div class="metric-name">Cancellations (48h)</div>
-                        <div class="metric-values">
-                            <span class="before-val">7.5%</span>
+                    <div class="fix-metric hero reveal reveal-delay-3">
+                        <div class="metric-name">Never did first recharge</div>
+                        <div class="metric-journey">
+                            <div class="step-group">
+                                <span class="step">20%</span>
+                                <span class="step-label">Pre-launch</span>
+                            </div>
                             <span class="arrow">&#8594;</span>
-                            <span class="after-val">6.2%</span>
-                            <span class="trend down">&#8595;</span>
-                        </div>
-                    </div>
-                    <div class="fix-metric hero reveal reveal-delay-4">
-                        <div class="metric-name">Renewals (36h)</div>
-                        <div class="metric-values">
-                            <span class="before-val">75%</span>
+                            <div class="step-group">
+                                <span class="step current">12%</span>
+                                <span class="step-label">Post-launch</span>
+                            </div>
                             <span class="arrow">&#8594;</span>
-                            <span class="after-val">87%</span>
-                            <span class="trend up">&#8593;</span>
+                            <div class="step-group">
+                                <span class="step hero-val">8%</span>
+                                <span class="step-label">Post-fix</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1114,47 +527,38 @@
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 4: FIX 2 — FASTER INSTALLATIONS     -->
+    <!-- 6. FIX 2: PARTNER INSTALLATIONS            -->
     <!-- ═══════════════════════════════════════════ -->
     <section id="fix-partners">
         <div class="section-inner">
             <div class="tag reveal">Fix 2</div>
-            <h2 class="section-title reveal reveal-delay-1">Partners Needed a Reason <span>to Move Fast</span></h2>
+            <h2 class="section-title reveal reveal-delay-1">Partners Needed Clarity Too. <span>We Fixed Incentives.</span></h2>
             <div class="fix-content">
                 <div class="fix-text reveal reveal-delay-2">
                     <p>
-                        Partners had to pay for a 30-day plan at installation but got first commission 28-30 days later.
+                        Install efficiency for online leads used to be ~48%, then dropped to ~40% with confusion and no ground support.
                     </p>
                     <p style="margin-top: 1rem;">
-                        <strong>We introduced &#8377;300 upfront commission at installation.</strong> Now partners earn the moment they install — no more waiting a full month.
+                        <strong>We streamlined incentives and made the process clearer for partners.</strong>
                     </p>
                 </div>
                 <div class="fix-metrics">
                     <div class="fix-metric reveal reveal-delay-2">
-                        <div class="metric-name">Lead interest</div>
+                        <div class="metric-name">Install efficiency (online leads)</div>
                         <div class="metric-values">
-                            <span class="before-val">65%</span>
+                            <span class="before-val">~48%</span>
                             <span class="arrow">&#8594;</span>
-                            <span class="after-val">75%</span>
-                            <span class="trend up">&#8593;</span>
+                            <span class="after-val" style="color: var(--gray);">~40%</span>
+                            <span class="trend" style="color: #ef4444;">&#8595; initial drop</span>
                         </div>
                     </div>
-                    <div class="fix-metric reveal reveal-delay-3">
-                        <div class="metric-name">Lead assignment</div>
-                        <div class="metric-values">
-                            <span class="before-val">88%</span>
-                            <span class="arrow">&#8594;</span>
-                            <span class="after-val">93%</span>
-                            <span class="trend up">&#8593;</span>
-                        </div>
-                    </div>
-                    <div class="fix-metric hero reveal reveal-delay-4">
-                        <div class="metric-name">Installation done</div>
+                    <div class="fix-metric hero reveal reveal-delay-3">
+                        <div class="metric-name">Assign-to-install ratio (post fix)</div>
                         <div class="metric-values">
                             <span class="before-val">55%</span>
                             <span class="arrow">&#8594;</span>
-                            <span class="after-val">80%</span>
-                            <span class="trend up">&#8593;</span>
+                            <span class="after-val">77%</span>
+                            <span class="trend up">&#8593; 40% jump</span>
                         </div>
                     </div>
                 </div>
@@ -1163,52 +567,59 @@
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 5: THE SCOREBOARD                   -->
+    <!-- 7. SLOPE > HEIGHT                          -->
     <!-- ═══════════════════════════════════════════ -->
-    <section id="scoreboard">
+    <section id="slope">
         <div class="section-inner">
-            <div class="tag reveal">The Scoreboard</div>
-            <h2 class="section-title reveal reveal-delay-1">Where We Stand <span>Today</span></h2>
-            <div class="scoreboard-grid">
-                <div class="scoreboard-card reveal reveal-delay-2">
-                    <div class="scoreboard-number"><span class="counter-value" data-target="100">0</span>+</div>
-                    <div class="scoreboard-label">Families every day</div>
-                </div>
-                <div class="scoreboard-card reveal reveal-delay-2">
-                    <div class="scoreboard-number">2.34 Lakh</div>
-                    <div class="scoreboard-label">WiomNet transactions</div>
-                    <div class="scoreboard-trend up">&#8593; from 2.24 Lakh</div>
-                </div>
-                <div class="scoreboard-card reveal reveal-delay-3">
-                    <div class="scoreboard-number">&#8377;18/day</div>
-                    <div class="scoreboard-label">ARPU</div>
-                    <div class="scoreboard-trend up">&#8593; from &#8377;17</div>
-                </div>
-                <div class="scoreboard-card reveal reveal-delay-3">
-                    <div class="scoreboard-number">1 in 3</div>
-                    <div class="scoreboard-label">Chose flexible plans</div>
-                </div>
-                <div class="scoreboard-card reveal reveal-delay-4">
-                    <div class="scoreboard-number">4 of 5</div>
-                    <div class="scoreboard-label">Partners on new system</div>
-                </div>
-                <div class="scoreboard-card reveal reveal-delay-4">
-                    <div class="scoreboard-number">12 of 100</div>
-                    <div class="scoreboard-label">Leave</div>
-                    <div class="scoreboard-trend down-good">&#8595; from 20</div>
-                </div>
+            <h2 class="section-title reveal">Don't Chase Height. <span>Trust the Slope.</span></h2>
+            <div class="slope-text">
+                <p class="reveal reveal-delay-1">
+                    We're not rushing to grow. We're making sure <strong>every process works, every number improves, every fix compounds.</strong>
+                </p>
+                <p class="reveal reveal-delay-2">
+                    <strong>100+ bookings a day without spending a rupee on push.</strong> That's the slope.
+                </p>
+                <div class="slope-highlight reveal reveal-delay-3">Slope &gt; Height</div>
             </div>
-            <p class="scoreboard-footer reveal reveal-delay-5">Every number moved in the right direction.</p>
         </div>
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 6: OUR STORY (Ek Kahani)           -->
+    <!-- 8. WHAT'S COMING NEXT                      -->
     <!-- ═══════════════════════════════════════════ -->
-    <section id="our-story">
+    <section id="whats-next">
+        <div class="section-inner">
+            <div class="tag reveal">What's Coming Next</div>
+            <h2 class="section-title reveal reveal-delay-1"><span>What's Coming</span> Next</h2>
+            <div class="timeline-grid">
+                <div class="timeline-card reveal reveal-delay-2">
+                    <div class="timeline-date">Step 1</div>
+                    <div class="timeline-text">Migrate existing users to pay-as-you-go plans</div>
+                </div>
+                <div class="timeline-card reveal reveal-delay-3">
+                    <div class="timeline-date">Step 2</div>
+                    <div class="timeline-text">Open other cities</div>
+                </div>
+                <div class="timeline-card reveal reveal-delay-4">
+                    <div class="timeline-date">Step 3</div>
+                    <div class="timeline-text">Start growing again</div>
+                </div>
+            </div>
+            <div class="timeline-closer">
+                <div class="timeline-card reveal reveal-delay-5">
+                    <div class="timeline-text">By 31st March, Wiom will be growing again &mdash; on a foundation that compounds.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 9. EK KAHANI                               -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="ek-kahani">
         <div class="section-inner">
             <div class="tag reveal">Our Story</div>
-            <h2 class="section-title reveal reveal-delay-1"><span>4.2 Crore People</span> Watched 'Ek Kahani'</h2>
+            <h2 class="section-title reveal reveal-delay-1"><span>4.2 Crore People</span> Watched Ek Kahani</h2>
             <div class="video-content">
                 <a href="https://www.youtube.com/watch?v=h2tKQ756nMs" target="_blank" rel="noopener" class="video-card reveal reveal-delay-2" style="text-decoration:none;color:inherit;display:block;">
                     <div class="video-thumb">
@@ -1223,11 +634,11 @@
                 </a>
                 <div class="video-text">
                     <p class="reveal reveal-delay-3">
-                        This is why customers come to us on their own. When people see our story, they connect with it. They tell their neighbours. They search for us online. That's the power of a brand people believe in.
+                        This is why customers come to us on their own. When people see our story, they connect with it. They tell their neighbours. They search for us online.
                     </p>
                     <div class="video-stat reveal reveal-delay-4">
                         <span class="num">4.2 Cr</span>
-                        <span class="txt">views in 1 month</span>
+                        <span class="txt">views &mdash; and counting</span>
                     </div>
                 </div>
             </div>
@@ -1235,65 +646,31 @@
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 7: MARCH PLAN                      -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section id="whats-next">
-        <div class="section-inner">
-            <div class="tag reveal">What's Coming Next</div>
-            <h2 class="section-title reveal reveal-delay-1"><span>March Plan:</span> What's Coming Next</h2>
-            <div class="timeline-grid">
-                <div class="timeline-card reveal reveal-delay-2">
-                    <div class="timeline-date">By 5th March</div>
-                    <div class="timeline-text">Partners fully moved to the new system</div>
-                </div>
-                <div class="timeline-card reveal reveal-delay-3">
-                    <div class="timeline-date">5th — 10th March</div>
-                    <div class="timeline-text">Flexible plans for existing customers</div>
-                </div>
-                <div class="timeline-card reveal reveal-delay-3">
-                    <div class="timeline-date">By 15th March</div>
-                    <div class="timeline-text">Performance marketing + partner offering finalised</div>
-                </div>
-                <div class="timeline-card reveal reveal-delay-4">
-                    <div class="timeline-date">By 30th March</div>
-                    <div class="timeline-text">New cities, new app, wider reach</div>
-                </div>
-            </div>
-            <div class="timeline-closer">
-                <div class="timeline-card reveal reveal-delay-5">
-                    <div class="timeline-text">By 31st March, Wiom will be a fully repositioned platform.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 8: TOGETHER                        -->
+    <!-- 10. TOGETHER                               -->
     <!-- ═══════════════════════════════════════════ -->
     <section id="together">
         <div class="section-inner">
             <div class="tag reveal">Together</div>
-            <h2 class="section-title reveal reveal-delay-1"><span>This Is How We Win</span></h2>
+            <h2 class="section-title reveal reveal-delay-1"><span>Let's Keep Building</span></h2>
             <div class="closing-text">
                 <p class="reveal reveal-delay-2">
-                    We made big changes. When things broke, <strong>we fixed them in days.</strong>
+                    We launched a new product. We reset the system.
                 </p>
                 <p class="reveal reveal-delay-3">
-                    Onboarding? Redesigned. Partner incentives? Restructured. <strong>The numbers moved.</strong>
+                    When things broke, <strong>we fixed them in days.</strong>
                 </p>
                 <p class="reveal reveal-delay-4">
-                    <strong>100+ families every day.</strong> Partners installing faster.<br/>
-                    <strong>4.2 crore people</strong> knowing our name.
+                    <strong>100+ families every day. Zero push spend. 4.2 crore people knowing our name.</strong>
                 </p>
                 <p class="closing-final reveal reveal-delay-5">
-                    Spot it. Fix it. Ship it. Let's keep building.
+                    Slope &gt; Height. Let's keep building.
                 </p>
             </div>
         </div>
     </section>
 
     <footer>
-        Wiom Townhall &middot; March 2026 &middot; This Is How We Win
+        Wiom Townhall &middot; March 2026 &middot; Slope &gt; Height
     </footer>
 
     <!-- Presentation Controls -->
@@ -1310,70 +687,29 @@
         // ── Intersection Observer for reveal animations ──
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-        // ── Counter animation (scoreboard cards) ──
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counters = entry.target.querySelectorAll('.counter-value');
-                    counters.forEach(counter => {
-                        if (counter.dataset.animated) return;
-                        counter.dataset.animated = 'true';
-                        const target = parseInt(counter.dataset.target);
-                        const duration = 1500;
-                        const start = performance.now();
-
-                        function update(now) {
-                            const elapsed = now - start;
-                            const progress = Math.min(elapsed / duration, 1);
-                            const eased = 1 - Math.pow(1 - progress, 3);
-                            counter.textContent = Math.round(target * eased);
-                            if (progress < 1) requestAnimationFrame(update);
-                        }
-                        requestAnimationFrame(update);
-                    });
-                }
-            });
-        }, { threshold: 0.3 });
-
-        document.querySelectorAll('.scoreboard-card').forEach(el => counterObserver.observe(el));
 
         // ── Nav scroll effect & progress bar ──
         const navbar = document.getElementById('navbar');
         const progressBar = document.getElementById('progressBar');
 
         window.addEventListener('scroll', () => {
-            // Nav shadow
             navbar.classList.toggle('scrolled', window.scrollY > 20);
-
-            // Progress bar
             const scrollTop = window.scrollY;
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            progressBar.style.width = scrollPercent + '%';
+            progressBar.style.width = (scrollTop / docHeight) * 100 + '%';
 
-            // Active nav link
             const sections = document.querySelectorAll('section[id]');
             let current = '';
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 120;
-                if (scrollTop >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
+                if (scrollTop >= section.offsetTop - 120) current = section.getAttribute('id');
             });
-
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
+                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
             });
         });
 
@@ -1382,9 +718,7 @@
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
@@ -1397,7 +731,6 @@
         const presDots = document.getElementById('presDots');
         const presCounter = document.getElementById('presCounter');
 
-        // Build dots
         slides.forEach((_, i) => {
             const dot = document.createElement('button');
             dot.className = 'pres-dot';
@@ -1409,28 +742,12 @@
             currentSlide = Math.max(0, Math.min(n, slides.length - 1));
             slides.forEach(s => s.classList.remove('slide-active'));
             slides[currentSlide].classList.add('slide-active');
-            // Trigger reveal animations on active slide
             slides[currentSlide].querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-            // Trigger counters on active slide
-            slides[currentSlide].querySelectorAll('.counter-value').forEach(counter => {
-                if (counter.dataset.presAnimated) return;
-                counter.dataset.presAnimated = 'true';
-                const target = parseInt(counter.dataset.target);
-                const start = performance.now();
-                function update(now) {
-                    const progress = Math.min((now - start) / 1500, 1);
-                    counter.textContent = Math.round(target * (1 - Math.pow(1 - progress, 3)));
-                    if (progress < 1) requestAnimationFrame(update);
-                }
-                requestAnimationFrame(update);
-            });
             updateDots();
         }
 
         function updateDots() {
-            presDots.querySelectorAll('.pres-dot').forEach((d, i) => {
-                d.classList.toggle('active', i === currentSlide);
-            });
+            presDots.querySelectorAll('.pres-dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
             presCounter.textContent = (currentSlide + 1) + ' / ' + slides.length;
         }
 
@@ -1450,26 +767,25 @@
         }
 
         presToggle.addEventListener('click', () => presMode ? exitPresMode() : enterPresMode());
-
         document.getElementById('prevSlide').addEventListener('click', () => goToSlide(currentSlide - 1));
         document.getElementById('nextSlide').addEventListener('click', () => goToSlide(currentSlide + 1));
-
         document.getElementById('fullscreenBtn').addEventListener('click', () => {
-            if (document.fullscreenElement) {
-                document.exitFullscreen();
-            } else {
-                document.documentElement.requestFullscreen();
-            }
+            document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen();
         });
 
         document.addEventListener('keydown', (e) => {
+            // F key shortcut: enter fullscreen + presentation mode from normal mode
+            if ((e.key === 'f' || e.key === 'F') && !presMode && !e.ctrlKey && !e.metaKey && !e.altKey) {
+                e.preventDefault();
+                document.documentElement.requestFullscreen().then(() => enterPresMode());
+                return;
+            }
+
             if (!presMode) return;
             if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
-                e.preventDefault();
-                goToSlide(currentSlide + 1);
+                e.preventDefault(); goToSlide(currentSlide + 1);
             } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                e.preventDefault();
-                goToSlide(currentSlide - 1);
+                e.preventDefault(); goToSlide(currentSlide - 1);
             } else if (e.key === 'Escape') {
                 exitPresMode();
             } else if (e.key === 'f' || e.key === 'F') {
