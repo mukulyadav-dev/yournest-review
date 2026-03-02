@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiom Townhall — January 2026</title>
+    <title>Wiom Townhall — March 2026</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -300,103 +300,142 @@
             margin-top: 0.15rem;
         }
 
-        /* ── Section 2: The Big Shift ── */
-        #big-shift {
-            background: var(--white);
+        /* ── Section 2: Gaps (honest transition) ── */
+        #gaps {
+            background: var(--light-gray);
         }
 
-        .shift-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 2.5rem;
+        .gaps-center {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
-        .shift-card {
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid #f3e8ff;
-            background: var(--white);
-            transition: all 0.4s ease;
-        }
-
-        .shift-card:hover {
-            border-color: rgba(233, 30, 140, 0.2);
-            box-shadow: 0 20px 60px rgba(233, 30, 140, 0.08);
-            transform: translateY(-4px);
-        }
-
-        .shift-card.highlight {
-            background: linear-gradient(135deg, var(--pink), #d946a8);
-            color: white;
-            border: none;
-        }
-
-        .shift-card.highlight h3,
-        .shift-card.highlight li {
-            color: white;
-        }
-
-        .shift-card h3 {
+        .gaps-center p {
             font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 1.25rem;
-            color: var(--dark);
-        }
-
-        .shift-card.highlight h3 {
-            color: rgba(255,255,255,0.85);
-        }
-
-        .shift-card ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.85rem;
-        }
-
-        .shift-card li {
-            font-size: 0.95rem;
-            line-height: 1.6;
             color: var(--gray);
-            padding-left: 1.5rem;
-            position: relative;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
         }
 
-        .shift-card li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.55rem;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--pink);
+        .gaps-center p strong {
+            color: var(--dark);
+            font-weight: 700;
         }
 
-        .shift-card.highlight li::before {
-            background: rgba(255,255,255,0.5);
+        /* ── Fix sections (3 & 4): two-column layout ── */
+        #fix-onboarding {
+            background: var(--white);
         }
 
-        .shift-card li strong {
-            font-weight: 600;
-        }
-
-        /* ── Section 3: Families ── */
-        #families {
+        #fix-partners {
             background: linear-gradient(180deg, #fdf2f8 0%, #fff 100%);
         }
 
-        .booking-grid {
+        .fix-content {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
             margin-top: 2.5rem;
         }
 
-        .metric-card {
+        .fix-text p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .fix-text p strong {
+            color: var(--dark);
+        }
+
+        .fix-metrics {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .fix-metric {
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            background: var(--white);
+            border: 1px solid rgba(233, 30, 140, 0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            transition: all 0.4s ease;
+        }
+
+        .fix-metric:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(233, 30, 140, 0.08);
+        }
+
+        .fix-metric .metric-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .fix-metric .metric-values {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .fix-metric .before-val {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray);
+            opacity: 0.6;
+        }
+
+        .fix-metric .arrow {
+            font-size: 1.2rem;
+            color: var(--pink);
+        }
+
+        .fix-metric .after-val {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .fix-metric .trend {
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.35rem;
+        }
+
+        .fix-metric .trend.up { color: #10b981; }
+        .fix-metric .trend.down { color: #10b981; }
+
+        .fix-metric.hero {
+            border: 2px solid var(--pink);
+            background: linear-gradient(135deg, #fff 0%, #fdf2f8 100%);
+            box-shadow: 0 8px 30px rgba(233, 30, 140, 0.1);
+        }
+
+        .fix-metric.hero .after-val {
+            font-size: 2rem;
+            color: var(--pink);
+        }
+
+        /* ── Section 5: Scoreboard ── */
+        #scoreboard {
+            background: var(--white);
+        }
+
+        .scoreboard-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .scoreboard-card {
             text-align: center;
-            padding: 2.5rem 2rem;
+            padding: 2rem 1.5rem;
             border-radius: 20px;
             background: var(--white);
             border: 1px solid rgba(233, 30, 140, 0.08);
@@ -404,38 +443,47 @@
             transition: all 0.4s ease;
         }
 
-        .metric-card:hover {
+        .scoreboard-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 20px 50px rgba(233, 30, 140, 0.1);
             border-color: rgba(233, 30, 140, 0.2);
         }
 
-        .metric-number {
-            font-size: clamp(2.5rem, 4vw, 3.5rem);
+        .scoreboard-number {
+            font-size: clamp(2rem, 4vw, 2.8rem);
             font-weight: 900;
             color: var(--dark);
             letter-spacing: -0.03em;
             line-height: 1;
         }
 
-        .metric-number .counter-value {
-            display: inline;
-        }
-
-        .metric-label {
-            font-size: 0.95rem;
+        .scoreboard-label {
+            font-size: 0.9rem;
             font-weight: 600;
             color: var(--dark);
             margin-top: 0.5rem;
         }
 
-        .metric-desc {
-            font-size: 0.82rem;
-            color: var(--gray);
+        .scoreboard-trend {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 600;
             margin-top: 0.35rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 100px;
         }
 
-        .booking-footer {
+        .scoreboard-trend.up {
+            color: #10b981;
+            background: #ecfdf5;
+        }
+
+        .scoreboard-trend.down-good {
+            color: #10b981;
+            background: #ecfdf5;
+        }
+
+        .scoreboard-footer {
             text-align: center;
             margin-top: 2.5rem;
             font-size: 1.15rem;
@@ -443,352 +491,7 @@
             color: var(--dark);
         }
 
-        /* ── Section 4: Trust (Conversion) ── */
-        #trust {
-            background: var(--white);
-        }
-
-        .conversion-visual {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            margin-top: 3rem;
-            justify-content: center;
-        }
-
-        .conv-box {
-            flex: 1;
-            max-width: 380px;
-            padding: 2.5rem;
-            border-radius: 20px;
-            text-align: center;
-            transition: all 0.5s ease;
-        }
-
-        .conv-box.before {
-            background: var(--light-gray);
-            border: 1px solid #e5e7eb;
-        }
-
-        .conv-box.after {
-            background: linear-gradient(135deg, #fce4f2, #fdf2f8);
-            border: 2px solid var(--pink);
-            box-shadow: 0 20px 60px rgba(233, 30, 140, 0.12);
-        }
-
-        .conv-box .step-label {
-            font-size: 0.78rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--gray);
-            margin-bottom: 0.75rem;
-        }
-
-        .conv-box.after .step-label {
-            color: var(--pink);
-        }
-
-        .conv-box .conv-number {
-            font-size: 4rem;
-            font-weight: 900;
-            letter-spacing: -0.03em;
-            line-height: 1;
-        }
-
-        .conv-box.before .conv-number {
-            color: var(--gray);
-        }
-
-        .conv-box.after .conv-number {
-            color: var(--pink);
-        }
-
-        .conv-box .conv-detail {
-            font-size: 1rem;
-            margin-top: 0.5rem;
-            color: var(--gray);
-        }
-
-        .conv-arrow {
-            font-size: 2.5rem;
-            color: var(--pink);
-            animation: arrowPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes arrowPulse {
-            0%, 100% { transform: translateX(0); opacity: 1; }
-            50% { transform: translateX(8px); opacity: 0.6; }
-        }
-
-        .conv-notes {
-            margin-top: 2.5rem;
-            padding: 2rem;
-            background: #fdf2f8;
-            border-radius: 16px;
-            border-left: 4px solid var(--pink);
-        }
-
-        .conv-notes h4 {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--pink);
-            margin-bottom: 0.75rem;
-        }
-
-        .conv-notes ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .conv-notes li {
-            font-size: 0.9rem;
-            color: var(--gray);
-            padding-left: 1.25rem;
-            position: relative;
-        }
-
-        .conv-notes li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.5rem;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--pink);
-        }
-
-        /* ── Section 5: Usage (Engagement + Plan Mix merged) ── */
-        #usage {
-            background: linear-gradient(180deg, #fff 0%, #fdf2f8 100%);
-        }
-
-        .chart-area {
-            margin-top: 2.5rem;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 3rem;
-            align-items: end;
-        }
-
-        .bar-chart {
-            display: flex;
-            align-items: flex-end;
-            gap: 3rem;
-            height: 320px;
-            padding: 0 2rem;
-            justify-content: center;
-        }
-
-        .bar-group {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .bar-value {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
-
-        .bar {
-            width: 120px;
-            border-radius: 12px 12px 4px 4px;
-            transition: height 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .bar::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 100%);
-        }
-
-        .bar.dec {
-            background: var(--dark);
-            height: 0;
-        }
-
-        .bar.jan {
-            background: linear-gradient(180deg, var(--pink), var(--pink-dark));
-            height: 0;
-        }
-
-        .bar.dec.animate { height: 250px; }
-        .bar.jan.animate { height: 262px; }
-
-        .bar-label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--gray);
-        }
-
-        .chart-side {
-            padding-bottom: 2rem;
-        }
-
-        .chart-side .plan-stat-number {
-            font-size: clamp(3rem, 6vw, 4.5rem);
-            font-weight: 900;
-            letter-spacing: -0.04em;
-            line-height: 1;
-            background: linear-gradient(135deg, var(--pink), #d946a8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .chart-side .plan-stat-desc {
-            font-size: 1.05rem;
-            color: var(--gray);
-            margin-top: 0.75rem;
-            line-height: 1.6;
-        }
-
-        .chart-side .plan-stat-desc strong {
-            color: var(--dark);
-        }
-
-        /* ── Section 6: Value (ARPU) ── */
-        #value {
-            background: linear-gradient(180deg, #fdf2f8 0%, #fff 100%);
-        }
-
-        .arpu-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-top: 2rem;
-        }
-
-        .arpu-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-
-        .arpu-card {
-            padding: 2rem 2.5rem;
-            border-radius: 16px;
-            background: var(--pink-light);
-            border-left: 4px solid var(--pink);
-            transition: all 0.3s ease;
-        }
-
-        .arpu-card:hover {
-            transform: translateX(6px);
-        }
-
-        .arpu-card .arpu-label {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--gray);
-            margin-bottom: 0.35rem;
-        }
-
-        .arpu-card .arpu-value {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: var(--dark);
-        }
-
-        .arpu-card .arpu-note {
-            font-size: 0.8rem;
-            color: var(--gray);
-            margin-top: 0.25rem;
-        }
-
-        .arpu-highlight {
-            text-align: center;
-        }
-
-        .arpu-highlight .big-text {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 700;
-            color: var(--gray);
-            line-height: 1.5;
-        }
-
-        .arpu-highlight .big-text strong {
-            color: var(--pink);
-            font-weight: 900;
-        }
-
-        /* ── Section 7: Partners (Acceptance) ── */
-        #partners {
-            background: var(--white);
-        }
-
-        .acceptance-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 2.5rem;
-        }
-
-        .donut-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2.5rem;
-            border-radius: 20px;
-            background: var(--white);
-            border: 1px solid rgba(233, 30, 140, 0.1);
-            transition: all 0.4s ease;
-        }
-
-        .donut-card:hover {
-            box-shadow: 0 20px 60px rgba(233, 30, 140, 0.1);
-            transform: translateY(-4px);
-        }
-
-        .donut-wrapper {
-            position: relative;
-            width: 180px;
-            height: 180px;
-            margin-bottom: 1.5rem;
-        }
-
-        .donut-wrapper svg {
-            transform: rotate(-90deg);
-        }
-
-        .donut-wrapper .donut-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 2.2rem;
-            font-weight: 900;
-            color: var(--pink);
-        }
-
-        .donut-card .donut-label {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--dark);
-            text-align: center;
-        }
-
-        .donut-card .donut-sublabel {
-            font-size: 0.85rem;
-            color: var(--gray);
-            text-align: center;
-            margin-top: 0.25rem;
-        }
-
-        /* ── Section 8: Our Story (Video — full section) ── */
+        /* ── Section 6: Our Story (Video) ── */
         #our-story {
             background: var(--darker);
             color: white;
@@ -898,7 +601,7 @@
             color: rgba(255,255,255,0.7);
         }
 
-        /* ── Section 9: What's Next ── */
+        /* ── Section 7: What's Next ── */
         #whats-next {
             background: var(--darker);
             color: white;
@@ -961,7 +664,7 @@
             font-size: 1.15rem;
         }
 
-        /* ── Section 10: Together (Closing) ── */
+        /* ── Section 8: Together (Closing) ── */
         #together {
             background: linear-gradient(135deg, #fdf2f8 0%, #fff 40%, #fce7f3 100%);
             text-align: center;
@@ -1121,38 +824,20 @@
         /* ── Responsive ── */
         @media (max-width: 768px) {
             .hero-content,
-            .shift-grid,
-            .chart-area,
-            .arpu-content,
-            .acceptance-grid,
+            .fix-content,
             .video-content,
             .timeline-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
-            .booking-grid {
-                grid-template-columns: 1fr;
+            .scoreboard-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
             }
 
             .hero-visual {
                 display: none;
-            }
-
-            .conversion-visual {
-                flex-direction: column;
-            }
-
-            .conv-arrow {
-                transform: rotate(90deg);
-            }
-
-            .bar-chart {
-                gap: 2rem;
-            }
-
-            .bar {
-                width: 80px;
             }
 
             section {
@@ -1181,12 +866,16 @@
                 font-size: 1.8rem;
             }
 
-            .metric-number {
-                font-size: 2.5rem;
+            .scoreboard-grid {
+                grid-template-columns: 1fr;
             }
 
-            .chart-side .plan-stat-number {
-                font-size: 3rem;
+            .scoreboard-number {
+                font-size: 2rem;
+            }
+
+            .fix-metric.hero .after-val {
+                font-size: 1.6rem;
             }
         }
     </style>
@@ -1198,12 +887,11 @@
         <div class="nav-brand">Wiom Townhall</div>
         <div class="nav-links">
             <a href="#opening" class="active">Home</a>
-            <a href="#big-shift">Shift</a>
-            <a href="#families">Families</a>
-            <a href="#trust">Trust</a>
-            <a href="#usage">Usage</a>
-            <a href="#partners">Partners</a>
-            <a href="#whats-next">Next</a>
+            <a href="#gaps">Fixes</a>
+            <a href="#scoreboard">Scoreboard</a>
+            <a href="#our-story">Story</a>
+            <a href="#whats-next">March</a>
+            <a href="#together">Together</a>
         </div>
     </nav>
 
@@ -1211,20 +899,17 @@
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 1: OPENING                         -->
+    <!-- Section 1: OPENING — "Here's Where Wiom Stands" -->
     <!-- ═══════════════════════════════════════════ -->
     <section id="opening">
         <div class="section-inner">
             <div class="hero-content">
                 <div class="hero-left">
-                    <div class="tag reveal">January 2026</div>
-                    <h1 class="hero-title reveal reveal-delay-1">What We Built Together</h1>
-                    <p class="hero-subtitle reveal reveal-delay-2">January was a month of big changes.</p>
-                    <p class="hero-desc reveal reveal-delay-3">
-                        Here's what happened — and why it matters for every single one of us.
-                    </p>
-                    <a href="#big-shift" class="hero-cta reveal reveal-delay-4">
-                        See What Happened
+                    <div class="tag reveal">March 2026</div>
+                    <h1 class="hero-title reveal reveal-delay-1">Here's Where Wiom Stands</h1>
+                    <p class="hero-subtitle reveal reveal-delay-2">Customers are finding us on their own. Zero push spend.</p>
+                    <a href="#gaps" class="hero-cta reveal reveal-delay-3">
+                        See How We Got Here
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
                 </div>
@@ -1240,8 +925,8 @@
                             <div class="label">Stay after first payment</div>
                         </div>
                         <div class="hero-stat-card">
-                            <div class="number">2.34 Lakh</div>
-                            <div class="label">Times customers used WiomNet</div>
+                            <div class="number">4.2 Crore</div>
+                            <div class="label">Watched our story</div>
                         </div>
                     </div>
                 </div>
@@ -1250,109 +935,63 @@
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 2: THE BIG SHIFT                   -->
+    <!-- Section 2: WE WATCHED EVERY NUMBER          -->
     <!-- ═══════════════════════════════════════════ -->
-    <section id="big-shift">
+    <section id="gaps">
         <div class="section-inner">
-            <div class="tag reveal">The Big Shift</div>
-            <h2 class="section-title reveal reveal-delay-1">We Stopped Pushing.<br/><span>People Started Pulling.</span></h2>
-            <div class="shift-grid">
-                <div class="shift-card reveal reveal-delay-2">
-                    <h3>What Changed</h3>
-                    <ul>
-                        <li>We stopped spending on <strong>door-to-door sales</strong> completely</li>
-                        <li>Customers are now <strong>finding us on their own</strong> — through word of mouth and our campaigns</li>
-                        <li>No more pushing. <strong>People are coming to us.</strong></li>
-                    </ul>
-                </div>
-                <div class="shift-card highlight reveal reveal-delay-3">
-                    <h3>What This Means</h3>
-                    <ul>
-                        <li>We're growing <strong>without burning money</strong></li>
-                        <li>Every rupee saved goes into building a <strong>better product</strong> for customers</li>
-                        <li>This is how <strong>great companies scale</strong> — by being wanted, not by knocking on doors</li>
-                    </ul>
-                </div>
+            <div class="gaps-center">
+                <div class="tag reveal">We Watched Every Number</div>
+                <h2 class="section-title reveal reveal-delay-1">When Something Broke,<br/><span>We Fixed It Fast</span></h2>
+                <p class="reveal reveal-delay-2">After the big changes, not everything worked perfectly.</p>
+                <p class="reveal reveal-delay-3">Some customers got confused during onboarding. Some partners hesitated on new leads.</p>
+                <p class="reveal reveal-delay-4"><strong>We caught the gaps early — and fixed them in days, not months.</strong></p>
             </div>
         </div>
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 3: FAMILIES CHOOSING WIOM          -->
+    <!-- Section 3: FIX 1 — CLEARER ONBOARDING      -->
     <!-- ═══════════════════════════════════════════ -->
-    <section id="families">
+    <section id="fix-onboarding">
         <div class="section-inner">
-            <div class="tag reveal">Families Choosing Wiom</div>
-            <h2 class="section-title reveal reveal-delay-1">Every Day, <span>100+ Families</span> Choose Wiom for Home Internet</h2>
-            <div class="booking-grid" style="grid-template-columns: 1fr; max-width: 400px; margin: 2.5rem auto 0;">
-                <div class="metric-card reveal reveal-delay-2">
-                    <div class="metric-number"><span class="counter-value" data-target="100">0</span>+</div>
-                    <div class="metric-label">Families Every Day</div>
-                    <div class="metric-desc">Choosing Wiom for their home</div>
+            <div class="tag reveal">Fix 1</div>
+            <h2 class="section-title reveal reveal-delay-1">Customers Weren't Sure <span>What to Do Next</span></h2>
+            <div class="fix-content">
+                <div class="fix-text reveal reveal-delay-2">
+                    <p>
+                        We redesigned the onboarding flow — <strong>clearer screens, explicit pricing, simpler journey.</strong>
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        When a customer books Wiom, they now know exactly what they're getting, what it costs, and what happens next. No confusion, no surprises.
+                    </p>
                 </div>
-            </div>
-            <p class="booking-footer reveal reveal-delay-5">People are choosing us because they want to — not because someone convinced them.</p>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 4: TRUST                           -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section id="trust">
-        <div class="section-inner">
-            <div class="tag reveal">Trust</div>
-            <h2 class="section-title reveal reveal-delay-1">Fewer Customers <span>Are Leaving</span></h2>
-            <div class="conversion-visual">
-                <div class="conv-box before reveal reveal-delay-2">
-                    <div class="step-label">Before</div>
-                    <div class="conv-number">20</div>
-                    <div class="conv-detail">out of 100 left</div>
-                </div>
-                <div class="conv-arrow reveal reveal-delay-3">&#8594;</div>
-                <div class="conv-box after reveal reveal-delay-4">
-                    <div class="step-label">Now</div>
-                    <div class="conv-number">12</div>
-                    <div class="conv-detail">out of 100 leave</div>
-                </div>
-            </div>
-            <div class="conv-notes reveal reveal-delay-5">
-                <h4>Why This Matters</h4>
-                <ul>
-                    <li>Every family that stays means <strong>steady income for Wiom</strong></li>
-                    <li>Partners earn more when customers stick around longer</li>
-                    <li>We're building something people <strong>actually want to keep using</strong></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 5: HOW CUSTOMERS USE WIOM          -->
-    <!-- ═══════════════════════════════════════════ -->
-    <section id="usage">
-        <div class="section-inner">
-            <div class="tag reveal">How Customers Use Wiom</div>
-            <h2 class="section-title reveal reveal-delay-1">Customers Are Using WiomNet <span>More Than Ever</span></h2>
-            <p class="subtitle reveal reveal-delay-1">WiomNet Transactions</p>
-            <div class="chart-area">
-                <div class="bar-chart reveal reveal-delay-2" id="barChart">
-                    <div class="bar-group">
-                        <div class="bar-value">2.24 Lakh</div>
-                        <div class="bar dec" id="barDec"></div>
-                        <div class="bar-label">December</div>
+                <div class="fix-metrics">
+                    <div class="fix-metric reveal reveal-delay-2">
+                        <div class="metric-name">Booking confirmed (48h)</div>
+                        <div class="metric-values">
+                            <span class="before-val">85%</span>
+                            <span class="arrow">&#8594;</span>
+                            <span class="after-val">88%</span>
+                            <span class="trend up">&#8593;</span>
+                        </div>
                     </div>
-                    <div class="bar-group">
-                        <div class="bar-value" style="color: var(--pink);">2.34 Lakh</div>
-                        <div class="bar jan" id="barJan"></div>
-                        <div class="bar-label">January</div>
+                    <div class="fix-metric reveal reveal-delay-3">
+                        <div class="metric-name">Cancellations (48h)</div>
+                        <div class="metric-values">
+                            <span class="before-val">7.5%</span>
+                            <span class="arrow">&#8594;</span>
+                            <span class="after-val">6.2%</span>
+                            <span class="trend down">&#8595;</span>
+                        </div>
                     </div>
-                </div>
-                <div class="chart-side">
-                    <div class="reveal reveal-delay-3">
-                        <div class="plan-stat-number">1 in 3</div>
-                        <p class="plan-stat-desc">
-                            new customers chose <strong>flexible recharge plans</strong> — they want to pay as they go, and we're giving them that choice.
-                        </p>
+                    <div class="fix-metric hero reveal reveal-delay-4">
+                        <div class="metric-name">Renewals (36h)</div>
+                        <div class="metric-values">
+                            <span class="before-val">75%</span>
+                            <span class="arrow">&#8594;</span>
+                            <span class="after-val">87%</span>
+                            <span class="trend up">&#8593;</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1360,71 +999,96 @@
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 6: CUSTOMERS SEE VALUE             -->
+    <!-- Section 4: FIX 2 — FASTER INSTALLATIONS     -->
     <!-- ═══════════════════════════════════════════ -->
-    <section id="value">
+    <section id="fix-partners">
         <div class="section-inner">
-            <div class="tag reveal">Customers See Value</div>
-            <h2 class="section-title reveal reveal-delay-1">Customers Are Spending <span>a Little More</span> Every Day</h2>
-            <div class="arpu-content">
-                <div class="arpu-cards">
-                    <div class="arpu-card reveal reveal-delay-2">
-                        <div class="arpu-label">Before</div>
-                        <div class="arpu-value">~&#8377;17 / day</div>
-                    </div>
-                    <div class="arpu-card reveal reveal-delay-3">
-                        <div class="arpu-label">Now</div>
-                        <div class="arpu-value">~&#8377;18 / day</div>
-                        <div class="arpu-note">(Excluding booking fee)</div>
-                    </div>
+            <div class="tag reveal">Fix 2</div>
+            <h2 class="section-title reveal reveal-delay-1">Partners Needed a Reason <span>to Move Fast</span></h2>
+            <div class="fix-content">
+                <div class="fix-text reveal reveal-delay-2">
+                    <p>
+                        Partners had to pay for a 30-day plan at installation but got first commission 28-30 days later.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong>We introduced &#8377;300 upfront commission at installation.</strong> Now partners earn the moment they install — no more waiting a full month.
+                    </p>
                 </div>
-                <div class="arpu-highlight reveal reveal-delay-4">
-                    <div class="big-text">Customers are paying more because <strong>they see the value</strong> — not because we forced them.</div>
+                <div class="fix-metrics">
+                    <div class="fix-metric reveal reveal-delay-2">
+                        <div class="metric-name">Lead interest</div>
+                        <div class="metric-values">
+                            <span class="before-val">65%</span>
+                            <span class="arrow">&#8594;</span>
+                            <span class="after-val">75%</span>
+                            <span class="trend up">&#8593;</span>
+                        </div>
+                    </div>
+                    <div class="fix-metric reveal reveal-delay-3">
+                        <div class="metric-name">Lead assignment</div>
+                        <div class="metric-values">
+                            <span class="before-val">88%</span>
+                            <span class="arrow">&#8594;</span>
+                            <span class="after-val">93%</span>
+                            <span class="trend up">&#8593;</span>
+                        </div>
+                    </div>
+                    <div class="fix-metric hero reveal reveal-delay-4">
+                        <div class="metric-name">Installation done</div>
+                        <div class="metric-values">
+                            <span class="before-val">55%</span>
+                            <span class="arrow">&#8594;</span>
+                            <span class="after-val">80%</span>
+                            <span class="trend up">&#8593;</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 7: OUR PARTNERS MOVED FAST         -->
+    <!-- Section 5: THE SCOREBOARD                   -->
     <!-- ═══════════════════════════════════════════ -->
-    <section id="partners">
+    <section id="scoreboard">
         <div class="section-inner">
-            <div class="tag reveal">Our Partners</div>
-            <h2 class="section-title reveal reveal-delay-1"><span>4 Out of 5</span> Partners Adopted the New System in Just 5 Days</h2>
-            <div class="acceptance-grid">
-                <div class="donut-card reveal reveal-delay-2">
-                    <div class="donut-wrapper">
-                        <svg viewBox="0 0 180 180" width="180" height="180">
-                            <circle cx="90" cy="90" r="75" fill="none" stroke="#fce4f2" stroke-width="16"/>
-                            <circle cx="90" cy="90" r="75" fill="none" stroke="var(--pink)" stroke-width="16"
-                                stroke-dasharray="471.24" stroke-dashoffset="471.24" stroke-linecap="round"
-                                class="donut-progress" data-percent="80"/>
-                        </svg>
-                        <div class="donut-text">80%</div>
-                    </div>
-                    <div class="donut-label">Partners moved to the new system</div>
-                    <div class="donut-sublabel">Within just 5 days</div>
+            <div class="tag reveal">The Scoreboard</div>
+            <h2 class="section-title reveal reveal-delay-1">Where We Stand <span>Today</span></h2>
+            <div class="scoreboard-grid">
+                <div class="scoreboard-card reveal reveal-delay-2">
+                    <div class="scoreboard-number"><span class="counter-value" data-target="100">0</span>+</div>
+                    <div class="scoreboard-label">Families every day</div>
                 </div>
-                <div class="donut-card reveal reveal-delay-3">
-                    <div class="donut-wrapper">
-                        <svg viewBox="0 0 180 180" width="180" height="180">
-                            <circle cx="90" cy="90" r="75" fill="none" stroke="#fce4f2" stroke-width="16"/>
-                            <circle cx="90" cy="90" r="75" fill="none" stroke="var(--pink)" stroke-width="16"
-                                stroke-dasharray="471.24" stroke-dashoffset="471.24" stroke-linecap="round"
-                                class="donut-progress" data-percent="90"/>
-                        </svg>
-                        <div class="donut-text">90%</div>
-                    </div>
-                    <div class="donut-label">Customers already covered</div>
-                    <div class="donut-sublabel">By the new system</div>
+                <div class="scoreboard-card reveal reveal-delay-2">
+                    <div class="scoreboard-number">2.34 Lakh</div>
+                    <div class="scoreboard-label">WiomNet transactions</div>
+                    <div class="scoreboard-trend up">&#8593; from 2.24 Lakh</div>
+                </div>
+                <div class="scoreboard-card reveal reveal-delay-3">
+                    <div class="scoreboard-number">&#8377;18/day</div>
+                    <div class="scoreboard-label">ARPU</div>
+                    <div class="scoreboard-trend up">&#8593; from &#8377;17</div>
+                </div>
+                <div class="scoreboard-card reveal reveal-delay-3">
+                    <div class="scoreboard-number">1 in 3</div>
+                    <div class="scoreboard-label">Chose flexible plans</div>
+                </div>
+                <div class="scoreboard-card reveal reveal-delay-4">
+                    <div class="scoreboard-number">4 of 5</div>
+                    <div class="scoreboard-label">Partners on new system</div>
+                </div>
+                <div class="scoreboard-card reveal reveal-delay-4">
+                    <div class="scoreboard-number">12 of 100</div>
+                    <div class="scoreboard-label">Leave</div>
+                    <div class="scoreboard-trend down-good">&#8595; from 20</div>
                 </div>
             </div>
+            <p class="scoreboard-footer reveal reveal-delay-5">Every number moved in the right direction.</p>
         </div>
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 8: OUR STORY (Ek Kahani)           -->
+    <!-- Section 6: OUR STORY (Ek Kahani)           -->
     <!-- ═══════════════════════════════════════════ -->
     <section id="our-story">
         <div class="section-inner">
@@ -1444,7 +1108,7 @@
                 </a>
                 <div class="video-text">
                     <p class="reveal reveal-delay-3">
-                        This is why customers are coming to us on their own now. When people see our story, they connect with it. They tell their neighbours. They search for us online. That's the power of a brand people believe in.
+                        This is why customers come to us on their own. When people see our story, they connect with it. They tell their neighbours. They search for us online. That's the power of a brand people believe in.
                     </p>
                     <div class="video-stat reveal reveal-delay-4">
                         <span class="num">4.2 Cr</span>
@@ -1456,28 +1120,28 @@
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 9: WHAT'S NEXT — WIOM ANCHORED     -->
+    <!-- Section 7: MARCH PLAN                      -->
     <!-- ═══════════════════════════════════════════ -->
     <section id="whats-next">
         <div class="section-inner">
-            <div class="tag reveal">What's Next</div>
-            <h2 class="section-title reveal reveal-delay-1"><span>Wiom Anchored:</span> Our March Plan</h2>
+            <div class="tag reveal">What's Coming Next</div>
+            <h2 class="section-title reveal reveal-delay-1"><span>March Plan:</span> What's Coming Next</h2>
             <div class="timeline-grid">
                 <div class="timeline-card reveal reveal-delay-2">
                     <div class="timeline-date">By 5th March</div>
-                    <div class="timeline-text">All partners fully moved to the new system</div>
+                    <div class="timeline-text">Partners fully moved to the new system</div>
                 </div>
                 <div class="timeline-card reveal reveal-delay-3">
                     <div class="timeline-date">5th — 10th March</div>
-                    <div class="timeline-text">Existing customers get flexible recharge plans</div>
+                    <div class="timeline-text">Flexible plans for existing customers</div>
                 </div>
                 <div class="timeline-card reveal reveal-delay-3">
                     <div class="timeline-date">By 15th March</div>
-                    <div class="timeline-text">Performance marketing restarts + partner offering finalised</div>
+                    <div class="timeline-text">Performance marketing + partner offering finalised</div>
                 </div>
                 <div class="timeline-card reveal reveal-delay-4">
                     <div class="timeline-date">By 30th March</div>
-                    <div class="timeline-text">New cities, new app, Wiom goes wider</div>
+                    <div class="timeline-text">New cities, new app, wider reach</div>
                 </div>
             </div>
             <div class="timeline-closer">
@@ -1489,30 +1153,32 @@
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- Section 10: TOGETHER                       -->
+    <!-- Section 8: TOGETHER                        -->
     <!-- ═══════════════════════════════════════════ -->
     <section id="together">
         <div class="section-inner">
             <div class="tag reveal">Together</div>
-            <h2 class="section-title reveal reveal-delay-1"><span>This Is All of Us</span></h2>
+            <h2 class="section-title reveal reveal-delay-1"><span>This Is How We Win</span></h2>
             <div class="closing-text">
                 <p class="reveal reveal-delay-2">
-                    January was hard. We changed almost everything.<br/>
-                    But the numbers say <strong>we made the right calls.</strong>
+                    We made big changes. When things broke, <strong>we fixed them in days.</strong>
                 </p>
                 <p class="reveal reveal-delay-3">
-                    <strong>100+ families every day.</strong> Customers staying longer.<br/>
-                    Partners moving fast. <strong>4.2 crore people</strong> knowing our name.
+                    Onboarding? Redesigned. Partner incentives? Restructured. <strong>The numbers moved.</strong>
                 </p>
-                <p class="closing-final reveal reveal-delay-4">
-                    March is going to be even bigger.<br/>Let's build this together.
+                <p class="reveal reveal-delay-4">
+                    <strong>100+ families every day.</strong> Partners installing faster.<br/>
+                    <strong>4.2 crore people</strong> knowing our name.
+                </p>
+                <p class="closing-final reveal reveal-delay-5">
+                    Spot it. Fix it. Ship it. Let's keep building.
                 </p>
             </div>
         </div>
     </section>
 
     <footer>
-        Wiom Townhall &middot; January 2026 &middot; What We Built Together
+        Wiom Townhall &middot; March 2026 &middot; This Is How We Win
     </footer>
 
     <!-- Presentation Controls -->
@@ -1537,42 +1203,7 @@
 
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-        // ── Bar chart animation ──
-        const chartObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    document.getElementById('barDec').classList.add('animate');
-                    setTimeout(() => {
-                        document.getElementById('barJan').classList.add('animate');
-                    }, 200);
-                }
-            });
-        }, { threshold: 0.3 });
-
-        const barChart = document.getElementById('barChart');
-        if (barChart) chartObserver.observe(barChart);
-
-        // ── Donut chart animation ──
-        const donutObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const circles = entry.target.querySelectorAll('.donut-progress');
-                    circles.forEach(circle => {
-                        const percent = parseInt(circle.dataset.percent);
-                        const circumference = 471.24;
-                        const offset = circumference - (circumference * percent / 100);
-                        circle.style.transition = 'stroke-dashoffset 1.5s cubic-bezier(0.16, 1, 0.3, 1)';
-                        setTimeout(() => {
-                            circle.style.strokeDashoffset = offset;
-                        }, 100);
-                    });
-                }
-            });
-        }, { threshold: 0.3 });
-
-        document.querySelectorAll('.donut-card').forEach(el => donutObserver.observe(el));
-
-        // ── Counter animation ──
+        // ── Counter animation (scoreboard cards) ──
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1597,7 +1228,7 @@
             });
         }, { threshold: 0.3 });
 
-        document.querySelectorAll('.metric-card').forEach(el => counterObserver.observe(el));
+        document.querySelectorAll('.scoreboard-card').forEach(el => counterObserver.observe(el));
 
         // ── Nav scroll effect & progress bar ──
         const navbar = document.getElementById('navbar');
@@ -1663,21 +1294,9 @@
             currentSlide = Math.max(0, Math.min(n, slides.length - 1));
             slides.forEach(s => s.classList.remove('slide-active'));
             slides[currentSlide].classList.add('slide-active');
-            // Trigger animations on active slide
+            // Trigger reveal animations on active slide
             slides[currentSlide].querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-            // Trigger bar chart if on that slide
-            if (slides[currentSlide].querySelector('#barChart')) {
-                document.getElementById('barDec').classList.add('animate');
-                setTimeout(() => document.getElementById('barJan').classList.add('animate'), 200);
-            }
-            // Trigger donuts
-            slides[currentSlide].querySelectorAll('.donut-progress').forEach(circle => {
-                const percent = parseInt(circle.dataset.percent);
-                const offset = 471.24 - (471.24 * percent / 100);
-                circle.style.transition = 'stroke-dashoffset 1.5s cubic-bezier(0.16, 1, 0.3, 1)';
-                setTimeout(() => { circle.style.strokeDashoffset = offset; }, 100);
-            });
-            // Trigger counters
+            // Trigger counters on active slide
             slides[currentSlide].querySelectorAll('.counter-value').forEach(counter => {
                 if (counter.dataset.presAnimated) return;
                 counter.dataset.presAnimated = 'true';
