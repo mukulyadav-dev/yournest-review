@@ -209,25 +209,50 @@
             margin-top: 0.5rem;
         }
 
-        /* ── Cricket Scorecard Slide ── */
-        #scorecard-slide {
+        /* ── Questions Slide ── */
+        #questions-slide {
             background: var(--darker);
-            text-align: center;
         }
 
-        .scorecard-img-wrap {
-            max-width: 420px;
-            margin: 0 auto;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-            border: 1px solid rgba(255,255,255,0.1);
+        #questions-slide .section-title { color: white; }
+        #questions-slide .section-title span { color: #f472b6; }
+
+        .questions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-top: 2.5rem;
+            max-width: 900px;
         }
 
-        .scorecard-img-wrap img {
-            width: 100%;
-            height: auto;
-            display: block;
+        .question-card {
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+
+        .question-card:hover {
+            background: rgba(233, 30, 140, 0.08);
+            border-color: rgba(233, 30, 140, 0.25);
+            transform: translateX(6px);
+        }
+
+        .question-card .q-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--pink);
+            margin-bottom: 0.5rem;
+        }
+
+        .question-card .q-text {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.6;
         }
 
         /* ── Section 1: Opening (Hero) ── */
@@ -970,19 +995,38 @@
         <div class="section-inner">
             <div class="title-slide-inner">
                 <div class="townhall-label reveal"><span>March 2026</span> Townhall</div>
-                <div class="townhall-date reveal reveal-delay-1">2nd of March 2026</div>
-                <div class="townhall-subtitle reveal reveal-delay-2">Where we are? Where do we go?</div>
+                <div class="townhall-subtitle reveal reveal-delay-1">Slope &gt; Height</div>
             </div>
         </div>
     </section>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- CRICKET SCORECARD                          -->
+    <!-- QUESTIONS FROM THE TEAM                    -->
     <!-- ═══════════════════════════════════════════ -->
-    <section id="scorecard-slide">
+    <section id="questions-slide">
         <div class="section-inner">
-            <div class="scorecard-img-wrap reveal">
-                <img src="cricket-scorecard.jpg" alt="Wiom Cricket Match Scorecard — WM Panthers 106/4 vs Wiom Team B 60/9">
+            <h2 class="section-title reveal"><span>Your Questions.</span> Our Answers.</h2>
+            <div class="questions-list">
+                <div class="question-card reveal reveal-delay-1">
+                    <div class="q-tag">Question / Query</div>
+                    <div class="q-text">The reset phase seems to be proceeding with many uncertainties and a fair lack of pace. There are multiple doubts internally and externally regarding the future of/at Wiom quite possibly due to lack of adequate communication. What can we expect regarding this?</div>
+                </div>
+                <div class="question-card reveal reveal-delay-2">
+                    <div class="q-tag">Question / Query</div>
+                    <div class="q-text">Why does customer care team not pick up calls? Many calls go without answer. And trustline is also not providing proper answer to the partners. When will this improve?</div>
+                </div>
+                <div class="question-card reveal reveal-delay-3">
+                    <div class="q-tag">Question / Query</div>
+                    <div class="q-text">I truly believe in the system and trust leadership's vision. However, the lack of clarity around role continuity has created uncertainty for many of us. We remain committed, but clearer communication would help us understand where we stand and plan our future with confidence.</div>
+                </div>
+                <div class="question-card reveal reveal-delay-4">
+                    <div class="q-tag">Question / Query</div>
+                    <div class="q-text">The way execution team laid off happened could it have been handled better rather than PSHs going and informing them may be a closed door conversation by CHRO and any one from senior leadership team talking to them, PSHs had nothing more than sorry to say and structural changes to inform. This creates a lot of distrust within the team.</div>
+                </div>
+                <div class="question-card reveal reveal-delay-5">
+                    <div class="q-tag">Question / Query</div>
+                    <div class="q-text">Satyam sir aapne league me itni achi batting ki jisse tushar or baki logo ki batting hi nhi aaai, aap kyu jldi out nhi hue?</div>
+                </div>
             </div>
         </div>
     </section>
